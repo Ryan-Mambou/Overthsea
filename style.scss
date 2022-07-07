@@ -1,0 +1,186 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'mattone';
+    src: url('assets/Mattone/desktop/Mattone-150.otf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;1,200&family=Patrick+Hand&family=Poppins:wght@300&display=swap');
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+   // background-color: red;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+div{
+    border: 1px solid black;
+}
+
+.one{
+    grid-column: 1/12;
+    grid-row: 1;
+    text-align: center;
+
+    .title{
+        font-size: 22px;
+        cursor: pointer;
+        font-weight: 800;
+        position: relative;
+        text-align: center;
+        top: 20px;
+    }
+
+    .burger-menu{
+        width: 35px;
+        height: 4px;
+        position: relative;
+        right: 30px;
+        float: right;
+        background-color: black;
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: black;
+            width: 35px;
+            height: 4px;
+            left: 0px;
+            top: 10px;
+        }
+    }
+}
+
+.two{
+    grid-column: 1/3;
+    grid-row: 2/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    .text{
+        display: block;
+        transform: rotate(-90deg);
+        font-size: 75px;
+        white-space: nowrap;
+        font-family: 'mattone';
+    }
+}
+
+.three{
+    grid-column: 3/7;
+    grid-row: 2/9;
+    background-image: url('assets/love-dress-white-04.jpeg');
+    background-size: cover;
+}
+
+.four{
+    grid-column: 7/12;
+    grid-row: 2/9;
+    position: relative;
+
+    .other-image{
+        position: absolute;
+        width: 125%;
+        border: 2px solid black;
+        height: 30%;
+        right: 0px;
+        top: 60px;
+        background-image: url('assets/love-dress-white-02.jpeg');
+        background-size: cover;
+    }
+
+    .order{
+        cursor: pointer;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        background-image: url('assets/trait-site-ben.svg');
+        background-size: cover;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span{
+            font-size: 20px;
+            margin-top: 30px;
+            margin-right: 10px;
+            white-space: nowrap;
+
+        }
+
+        .arrow{
+            height: 1px;
+            width: 50px;
+            background-color: black;
+            position: relative;
+            margin-top: 30px;
+
+            &::after{
+                content: "";
+                height: 5px;
+                width: 5px;
+                border-right: 1px solid black;
+                border-top: 1px solid black;
+                position: absolute;
+                right: -5px;
+                transform: rotate(45deg);
+                bottom: -3px;
+            }
+        }
+        
+    }
+}
+
+.five{
+    grid-column: 1/7;
+    grid-row: 9/10;
+    display: flex;
+    align-items: center;
+
+    .links{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 18px;
+        word-spacing: 30px;
+
+        .link{
+            cursor: pointer;
+        }
+    }
+}
+
+.six{
+    grid-column: 7/12;
+    grid-row: 9/10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .dot{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    .signature{
+        font-size: 20px;
+    }
+}
